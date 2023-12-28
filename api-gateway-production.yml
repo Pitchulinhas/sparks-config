@@ -1,0 +1,15 @@
+server:
+  port: ${PORT}
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_SERVER_DEFAULT_ZONE_URL}
